@@ -1,0 +1,24 @@
+.wall{
+    background-color: gray;
+}
+.player{
+    background-color: green;
+}
+.goal {
+    background-color: gold;
+}
+.create {
+    background-color: brown;
+}
+.space {
+    background-color: black;
+}
+.box {
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+body{
+    display: inline-block;
+}
