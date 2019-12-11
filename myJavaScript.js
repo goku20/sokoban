@@ -88,4 +88,46 @@ function playerMove(y_offset, x_offset) {
 
 }
 
+function KeyDown(wichkey)
+{
+    if (wichkey == 37) move(-1.0);
+    if (wichkey == 38) move(0.-1);
+    if (wichkey == 39) move(1.0);
+    if (wichkey == 40) move(0.1);
+    
+}
 
+function Init(ll)
+{
+  var cc, ii,jj,kk;
+  for(ii = 0; ii < Xmax; ii++)
+  {
+    for (jj=0; jj <Ymax; jj++)
+    Fid[ii] [jj]=0;
+
+  }
+  /*  Legend
+    W = Wall
+    B = Movable block
+    P = Player starting position
+    G = Goal area for the blocks
+*/
+  ii=0 jj=0;
+  for (kk=0; kk<scrn[ll].length; kk++)
+  {
+    cc= scrn[ll].charArt(kk);
+    if (cc=="G") Fid[ii][jj]=1
+    if (cc=="W") Fid[ii][jj]=2
+    if (cc=="B") Fid[ii][jj]=3
+    if (cc=="") Fid[ii][jj]=4
+
+    if (cc=="P") { Fid[ii][jj]=5; PosX=ii; PosY=jj;}
+    if ((cc=="") && (cc" " ) && Fid[ii][jj]==0)) alert (cc);
+    if (cc=="") { jj++; ii=0; }
+    else ii++;
+    
+
+
+    
+  }
+}
