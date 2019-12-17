@@ -88,15 +88,37 @@ function playerMove(y_offset, x_offset) {
 
 }
 
-function KeyDown(wichkey)
-{
-    if (wichkey == 37) move(-1.0);
-    if (wichkey == 38) move(0.-1);
-    if (wichkey == 39) move(1.0);
-    if (wichkey == 40) move(0.1);
-    
+function myFunction(e) {
+  var x = document.getElementById("log");
+  x.innerHTML = e.keyCode;
+  if (e.keyCode == 37) {
+    playerMove(-1.0);
+  }
+  else if (e.keyCode == 38) {
+    playerMove(0. - 1);
+  }
+  if (e.keyCode == 39) {
+    playerMove(1.0);
+  }
+  if (e.keyCode == 40) {
+    playerMove(0.1);
+  }
 }
 
+
+function playerMove(wichkey) {
+  console.log(wichkey);
+}
+
+var i , j, I_Sel,J_Sel, y_offset, x_offse;
+Fid= new Array(XMax);
+ for(I=0; I < XMax; i++)
+{
+  Fid[i]= new Array(YMax);
+}
+
+
+/*
 function Init(ll)
 {
   var cc, ii,jj,kk;
@@ -106,12 +128,13 @@ function Init(ll)
     Fid[ii] [jj]=0;
 
   }
-  /*  Legend
+    Legend
     W = Wall
     B = Movable block
     P = Player starting position
     G = Goal area for the blocks
 */
+/*
   ii=0 jj=0;
   for (kk=0; kk<scrn[ll].length; kk++)
   {
@@ -125,9 +148,9 @@ function Init(ll)
     if ((cc=="") && (cc" " ) && Fid[ii][jj]==0)) alert (cc);
     if (cc=="") { jj++; ii=0; }
     else ii++;
-    
 
 
-    
+
+
   }
-}
+  */

@@ -1,11 +1,11 @@
 .wall{
-    background-color: gray;
+    background-color:rgb(107, 31, 88);
 }
 .player{
     background-color: green;
 }
 .goal {
-    background-color: gold;
+    background-color: rgb(38, 14, 172);
 }
 .create {
     background-color: brown;
@@ -21,4 +21,9 @@
 
 body{
     display: inline-block;
+
 }
+#log{ color: red;
+
+   
+ }
